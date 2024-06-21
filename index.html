@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather API</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" 
+    integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Know the Weather</h1>
+    </header>
+    
+        <div class="container container-front">
+            <main>
+                <label><span class="fa-solid fa-magnifying-glass"></span><input type="text" id="input-city" placeholder="Enter City Name"></label><br>
+                <button class="search-city" type="submit">Search</button>
+                <p class="note"><u>NOTE</u>: If no input, then it will take your default location as input if location is enabled</p>
+            </main>
+        </div>
+
+        <div class="container container-back">
+            <header>
+                <h1 class="display-city"></h1>
+            </header>
+            <main>
+                <img src="weatherAppicons/rain.png" alt="weather" class="weather-icon" width="170px">
+                <h2><span class="temp">22</span>°C</h2>
+                <h3>Feels Like: <span class="feels-like">33</span>°C</h3>
+                <div class="lat-lon">
+                    <img src="weatherAppicons/latitude.png" alt="" width="70px">
+                    <div class="lat-lon-info">
+                        <p>Latitude: <span class="latitude">--.--°-</span></p>
+                        <p>Longitude: <span class="longitude">--.--°-</span></p>
+                    </div>
+                </div>
+                <div class="details">
+                    <div class="col">
+                        <img src="weatherAppicons/humidity.png" alt="humidity-icon" width="70px">
+                        <div class="info">
+                            <p class="humidity">-- %</p>
+                            <p>Humidity</p>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <img src="weatherAppicons/wind.png" alt="wind-icon" width="70px">
+                        <div class="info">
+                            <p class="wind-speed">-- km/h</p>
+                            <p>Wind Speed</p>
+                        </div>
+                    </div>
+                </div>
+                <button type="submit" id="change-city">Change City</button>
+            </main>
+        </div>
+   
+    
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+<!-- https://restcountries.com/v3.1/name/india?fullText=true -->

@@ -1,0 +1,171 @@
+*, ::before, ::after{  margin: 0; box-sizing: border-box; }
+html{ font-size: 15px; scroll-behavior: smooth; background: #5e5c5c; }
+body{ font: 16px/1.4 'Trebuchet MS'; text-align: center; }
+.container{ max-width: 1200px; margin: auto; padding: 0 1rem; }
+a{ text-decoration: none; }
+label{ display: inline-block; }
+button{ cursor: pointer; }
+
+
+header{
+    position: absolute;
+    top: 3%;
+    left: 3%;
+    border-bottom: 1px solid black;
+}
+
+
+.container main{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+input{ 
+    border: none; 
+    margin-left: 5px; 
+    font-size: 1rem;
+    padding: 10px;
+}
+label{ 
+    border: none; 
+    border-radius: 15px;
+    padding: 10px;
+    background: #fff;
+}
+button{
+    margin-top: 10px;
+    border-radius: 15px;
+    border: none;
+    padding: 10px;
+    width: 40%;
+    margin-left: 30%;
+}
+.note{
+    margin-top: 10px;
+    font-size: 0.8rem;
+    text-align: center;
+}
+
+
+.container-back header{
+    font-size: 1.5rem;
+    position: relative;
+    border: none;
+    top: 0;
+    left: 0;
+}
+.weather-icon{
+    margin-left: 30%;
+}
+h2{
+    font-size: 5rem;
+}
+h3{
+    font-size: 1rem;
+}
+.lat-lon{
+    display: flex;
+    align-items: center;
+    margin-left: 25%;
+    margin-top: 30px;
+}
+.lat-lon-info{
+    margin-left: 10px;
+}
+
+.details{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+}
+.col{
+    display: flex;
+    align-items: center;
+}
+.info{
+    margin-left: 10px;
+}
+p{
+    font-size: 1.2rem;
+}
+.container-back button{
+    margin-top: 30px;
+}
+
+
+/* CONTAINERS */
+.container-back.flipped {
+    -webkit-transform: rotateY(0);
+    transform: rotateY(0);
+}
+.container{
+    border: 1px solid black;
+    border-radius: 15px;
+    display: inline-block;
+    background: linear-gradient(135deg, #736bdd, #aef29a);
+    padding: 50px;
+
+    position: absolute;
+    width: 100%;
+    
+    perspective: 1000px;
+
+    width: 100%; /* Ensures the width is consistent */
+    max-width: 500px; /* Defines the maximum width */
+
+    -webkit-transition: all 0.8s ease;
+    transition: all 0.8s ease;
+    position: absolute;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
+    box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
+}
+.container-front.flipped {
+    -webkit-transform: rotateY(-180deg);
+    transform: rotateY(-180deg);
+}
+.container-back {
+    -webkit-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+    text-align: center;
+    top: 10%;
+    right: 30%;
+    color: #fff;
+    padding: 40px;
+}
+.container-front{
+    top: 30%;
+    right: 30%;
+}
+
+
+
+
+@media screen and (max-width:1220px) {
+    .container{ top: 15%; left: 25%; }
+}
+@media screen and (max-width:980px) {
+    .container{ top: 15%; left: 16%; width: 100%; }
+} 
+
+/* mobile */
+@media screen and (max-width:767px) {
+    p{ font-size: 1rem; }
+    .weather-icon{ margin-left: 25%; }
+    .lat-lon{ margin-left: 20%; }
+    .col img{ width: 50px; }
+    h1{ font-size: 2rem; }
+    .container{ max-width: 400px; left: 20%; top: 20%; }
+}
+@media screen and (max-width:460px) {
+    body{ font-size: 0.5rem; }
+    p{ font-size: 0.7rem; }
+    .weather-icon{ margin-left: 10%; }
+    .container{ top: 20%; left: 10%; width: 80%; text-align: center; }
+    .col img{ width: 30px; }
+    .lat-lon{ margin-left: 15%; }
+    .lat-lon img{ width: 45px; }
+    label input{ width: 80%; }
+}
